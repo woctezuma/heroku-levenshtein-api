@@ -14,7 +14,12 @@ def find_indices_of_nsmallest(n, l):
     return heapq.nsmallest(n, range(len(l)), key=l.__getitem__)
 
 
-def find_most_similar_game_names(query_name, num_matches=5):
+def find_most_similar_game_names(query_name, num_matches=None):
+    if num_matches is None:
+        num_matches = 5
+
+    num_matches = int(num_matches)
+
     query_name_lower_case = query_name.lower()
 
     distances = [
