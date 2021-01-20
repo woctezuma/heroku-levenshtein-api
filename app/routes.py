@@ -1,4 +1,4 @@
-from flask import jsonify
+from flask import jsonify, request
 
 from app import app
 from app.match_utils import find_most_similar_game_names
@@ -10,7 +10,8 @@ def main():
 
 
 @app.route("/find/")
-@app.route("/find/<query_name>")
-def find_game_name(query_name=None, num_matches=5):
+def find_game_name():
+    query_name = request.args.get("name", "")
+    num_matches = request.args.get("n", None)
     data = find_most_similar_game_names(query_name, num_matches)
     return jsonify(data)
