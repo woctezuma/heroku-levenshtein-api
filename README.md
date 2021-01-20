@@ -30,7 +30,13 @@ git push heroku main
 
 ## Web App
 
-TODO
+The web app can be accessed at this URL:
+
+> https://arcane-springs-42307.herokuapp.com/
+
+To ask for results about Cyberpunk 2077:
+
+> https://arcane-springs-42307.herokuapp.com/find/Cyberpunk+2077
 
 ## References
 
