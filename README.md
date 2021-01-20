@@ -36,7 +36,7 @@ The web app can be accessed at this URL:
 
 To ask for results about "Cyberpunk 2077", and constrain the response to 10 matches:
 
-> https://arcane-springs-42307.herokuapp.com/find/?name="Cyberpunk 2077"&n=10
+> [https://arcane-springs-42307.herokuapp.com/find/?name=\"Cyberpunk 2077\"&n=10][api-example]
 
 ## References
 
@@ -50,3 +50,5 @@ To ask for results about "Cyberpunk 2077", and constrain the response to 10 matc
 [flask-clip-api]: <https://github.com/woctezuma/heroku-flask-api>
 
 [flask-levenshtein-api]: <https://github.com/woctezuma/heroku-levenshtein-api>
+
+[api-example]: <https://arcane-springs-42307.herokuapp.com/find/?name="Cyberpunk 2077"&n=10>
