@@ -38,6 +38,13 @@ To ask for results about "Cyberpunk 2077", and constrain the response to 10 matc
 
 > [https://arcane-springs-42307.herokuapp.com/find/?name=\"Cyberpunk 2077\"&n=10][api-example]
 
+## CORS and rate-limits
+
+If you want to make your web app accessible from a Single-Page Application,
+e.g. written in Svelte, then you will want to specify CORS and rate-limits.
+
+See the `cors` branch of my repository for more information.
+
 ## References
 
 - [`heroku-flask-api`][flask-clip-api]
