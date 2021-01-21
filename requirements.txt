@@ -1,4 +1,5 @@
 Flask
 Flask-Limiter
+flask-cors
 gunicorn
 python-Levenshtein
