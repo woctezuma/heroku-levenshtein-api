@@ -4,7 +4,12 @@ from flask_limiter.util import get_remote_address
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/find/*": {"origins": "*"}})
+CORS(
+    app,
+    resources={
+        r"/find/*": {"origins": ["woctezuma.github.io", "http://localhost:5000"]}
+    },
+)
 
 limiter = Limiter(
     app,
