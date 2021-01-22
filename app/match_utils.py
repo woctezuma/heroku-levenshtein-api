@@ -1,7 +1,6 @@
 import heapq
 
-import Levenshtein as lv
-
+from app.distance_utils import compute_distances
 from app.file_utils import (
     load_app_names_lower_case,
     convert_indices_to_ids,
@@ -14,7 +13,7 @@ def find_indices_of_nsmallest(n, l):
     return heapq.nsmallest(n, range(len(l)), key=l.__getitem__)
 
 
-def find_most_similar_game_names(query_name, num_matches=None):
+def find_most_similar_game_names(query_name, num_matches=None, use_levenshtein=True):
     if num_matches is None:
         num_matches = 5
 
@@ -22,9 +21,11 @@ def find_most_similar_game_names(query_name, num_matches=None):
 
     query_name_lower_case = query_name.lower()
 
-    distances = [
-        lv.distance(query_name_lower_case, s) for s in load_app_names_lower_case()
-    ]
+    distances = compute_distances(
+        word=query_name_lower_case,
+        possibilities=load_app_names_lower_case(),
+        use_levenshtein=use_levenshtein,
+    )
 
     indices = find_indices_of_nsmallest(num_matches, distances)
 
