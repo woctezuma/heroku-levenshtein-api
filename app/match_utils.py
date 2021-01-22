@@ -38,5 +38,9 @@ def find_most_similar_game_names(query_name, num_matches=None, use_levenshtein=T
 
 
 if __name__ == "__main__":
-    data = find_most_similar_game_names(query_name="Crash Bandicoot", num_matches=5)
-    print(data)
+    q = "Crash Bandicoot"
+    n = 5
+    d = find_most_similar_game_names(query_name=q, num_matches=n, use_levenshtein=True)
+    print(d)
+    d = find_most_similar_game_names(query_name=q, num_matches=n, use_levenshtein=False)
+    print(d)
