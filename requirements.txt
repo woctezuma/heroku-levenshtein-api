@@ -2,4 +2,4 @@ Flask
 Flask-Limiter
 flask-cors
 gunicorn
-python-Levenshtein
+python-Levenshtein==0.20.4
